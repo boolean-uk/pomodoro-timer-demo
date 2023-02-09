@@ -3,6 +3,7 @@
   --primary-color: #da4b27;
   --secondary-color: #f7b0d6;
   --font-family: 'Grandstander', cursive;
+  --timer-size: 600px;
 }
 
 * {
@@ -33,6 +34,51 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   place-items: center;
+}
+
+main > div {
+  margin: 16px;
+}
+
+.pomodoro {
+  height: var(--timer-size);
+  width: var(--timer-size);
+  background-image: url("./images/pomodoro.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;
+}
+
+.arm {
+  height: var(--timer-size);
+  width: var(--timer-size);
+  background-image: url("./images/arm.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;
+  transition: transform 0.5s ease-in;
+}
+
+.progress-ring {
+  position: absolute;
+  height: var(--timer-size);
+  width: var(--timer-size);
+}
+
+circle {
+  fill: transparent;
+  stroke-width: 6;
+}
+
+.progress-ring--shadow circle {
+  stroke: var(--secondary-color);
+}
+
+.progress-ring--timer circle {
+  stroke: var(--primary-color);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.5s ease-in;
 }
 
 .controls {
