@@ -28,3 +28,59 @@ body {
 h1 {
   font-size: 120px;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+}
+
+.controls {
+  width: 290px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.timers {
+  background-color: var(--secondary-color);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.timer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 40px;
+  padding: 16px 0 10px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.timer--active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: 36px;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 0 10px 0;
+  cursor: pointer;
+}
+
+.control-btn {
+  background-color: var(--primary-color);
+  background-image: url("./images/play.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.add-time-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  grid-column: 1 / span 2;
+}
