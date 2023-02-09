@@ -9,12 +9,19 @@
 // - change the background colour
 // - decrease counter
 
+// Interaction 3
+// When I click the add 1 minute button
+// - add time to the current timer
+
 // declare variables that hold unchanging state
 const controlBtn = document.querySelector(".control-btn")
 const workTimer = document.querySelector("#workTimer")
 const breakTimer = document.querySelector("#breakTimer")
+const addTimeBtn = document.querySelector("#addTimeBtn")
+const arm = document.querySelector(".arm")
 const workSeconds = 3
 const breakSeconds = 3
+const increment = 60
 // declare variables that hold changing state
 let isPaused, timerInterval, currentSeconds, currentTimer, isWorkPhase
 isPaused = true
@@ -83,4 +90,11 @@ function updateTimer(timer, numSeconds) {
   // calculate the right time before updating
   timer.innerText = `${minutes}:${formattedSeconds}`
 }
-//
+
+addTimeBtn.addEventListener("click", () => {
+  // add to the total time
+  currentSeconds += increment
+
+  //update the timer
+  updateTimer(currentTimer, currentSeconds)
+})
