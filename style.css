@@ -20,6 +20,9 @@ body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  grid-template-rows: 300px 700px;
 }
 
 h1 {
