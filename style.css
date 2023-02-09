@@ -1,0 +1,27 @@
+:root {
+  --bg-color: #f9d3ee;
+  --primary-color: #da4b27;
+  --secondary-color: #f7b0d6;
+  --font-family: 'Grandstander', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 120px;
+}
