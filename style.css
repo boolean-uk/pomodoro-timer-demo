@@ -125,8 +125,32 @@ button {
   background-position: center center;
 }
 
+.control-btn--pause {
+  background-image: url("./images/pause.svg");
+}
+
 .add-time-btn {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   grid-column: 1 / span 2;
+}
+
+button:hover:not([disabled]) {
+  transform: scale(1.05)
+}
+
+button:disabled {
+  opacity: 0.2;
+}
+
+body.break-phase {
+  --bg-color: #ebf6fb;
+  --primary-color: #5c9700;
+  --secondary-color: #cde7ef;
+  --css-filter:
+    grayscale(68%)
+    brightness(123%)
+    sepia(0)
+    hue-rotate(428deg)
+    saturate(142%);
 }
