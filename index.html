@@ -12,7 +12,26 @@
   <body>
     <h1>Pomodoro!</h1>
     <main>
+      <div class="pomodoro">
+        <svg class="progress-ring progress-ring--shadow" viewBox="0 0 110 110">
+          <circle r="50" cx="50%" cy="50%"/>
+        </svg>
+        <svg class="progress-ring progress-ring--timer" viewBox="0 0 110 110">
+          <circle id="circleTimer" r="50" cx="50%" cy="50%"/>
+        </svg>
+        <div class="arm">
 
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="timers">
+          <div class="timer timer--active">0:00</div>
+          <div class="timer">0:00</div>
+        </div>
+        <button class="control-btn"></button>
+        <button id="addTimeBtn" class="add-time-btn">+1 minute!</button>
+      </div>
     </main>
   </body>
 </html>
